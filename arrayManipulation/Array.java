@@ -13,5 +13,18 @@ public class Array {
             System.out.println(items[i]);
         }
     }
+
+    public void insert(int item) {
+        if (items.length == count) {
+            int[] newItem = new int[count * 2];
+
+            for (int i=0; i<count; i++)
+                newItem[i] = items[i];
+            
+            items = newItem;
+        }
+
+        items[count++] = item;
+    }
     
 }
