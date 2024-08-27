@@ -32,7 +32,7 @@ public class Array {
             throw new IllegalArgumentException();
         }
 
-        for (int i=index; i<count; i++) {
+        for (int i=index; i<count - 1; i++) {
             items[i] = items[i + 1];
         }
         count--;
