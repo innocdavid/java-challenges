@@ -9,7 +9,7 @@ public class MainClass {
         numbers.insert(30);
         numbers.insert(40);
         numbers.insert(50);
-        numbers.removeAt(0);
+        System.out.println("index at: " + numbers.indexOf(10));
         numbers.print();
     }
     
