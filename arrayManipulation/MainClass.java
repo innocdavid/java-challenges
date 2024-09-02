@@ -10,6 +10,7 @@ public class MainClass {
         numbers.insert(40);
         numbers.insert(50);
         System.out.println("index at: " + numbers.indexOf(10));
+        System.out.println("max: " + numbers.max());
         numbers.print();
     }
     

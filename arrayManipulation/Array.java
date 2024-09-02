@@ -17,12 +17,11 @@ public class Array {
         System.out.print("Array elements: ");
         for (int i = 0; i < count; i++) {
             System.out.print(items[i]);
-            if (i < count - 1) System.out.print(", "); // Format output
+            if (i < count - 1) System.out.print(", ");
         }
         System.out.println();
     }
 
-    // Method to insert an item into the array
     public void insert(int item) {
         if (items.length == count) {
             int[] newItem = new int[count * 2];
@@ -63,5 +62,20 @@ public class Array {
 
     public void clear() {
         count = 0;
+    }
+
+    public int max() {
+        if (count == 0) {
+            throw new IllegalStateException("The array is empty.");
+        }
+
+        int max = items[0];
+        for (int i = 1; i < count; i++) {
+            if (items[i] > max) {
+                max = items[i];
+            }
+        }
+
+        return max;
     }
 }
