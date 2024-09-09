@@ -12,6 +12,21 @@ public class MainClass {
         System.out.println("index at: " + numbers.indexOf(10));
         System.out.println("max: " + numbers.max());
         numbers.print();
+
+        System.out.println("xxxxxxxxxxxxxxxxxxxx");
+
+        Array array1 = new Array(5);
+        array1.insert(1);
+        array1.insert(50);
+        array1.insert(3);
+        array1.insert(4);
+        array1.insert(5);
+        System.out.println("index at: " + array1.indexOf(10));
+        System.out.println("max: " + array1.max());
+        array1.print();
+        Array result = numbers.intersect(array1);
+        System.out.println("intersection: " + result);
+        
     }
     
 }

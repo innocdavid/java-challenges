@@ -1,5 +1,7 @@
 package arrayManipulation;
 
+import java.util.ArrayList;
+
 public class Array {
     private int[] items;
     private int count;
@@ -78,4 +80,25 @@ public class Array {
 
         return max;
     }
+
+    public Array intersect(Array newArray) {
+        ArrayList<Integer> commonItems = new ArrayList<>();
+    
+        for (int i = 0; i < count; i++) {
+            for (int j = 0; j < newArray.count; j++) {
+                if (items[i] == newArray.items[j] && !commonItems.contains(items[i])) {
+                    commonItems.add(items[i]);
+                    break; 
+                }
+            }
+        }
+    
+        Array result = new Array(commonItems.size());
+        for (int item : commonItems) {
+            result.insert(item);
+        }
+
+        return result; 
+    }
+    
 }
